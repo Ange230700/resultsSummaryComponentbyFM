@@ -1,4 +1,63 @@
-p{
-    font-family:'HankenGrotesk';
-        src: url('./assets/fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype');
+@font-face {
+  font-family: "HankenGrotesk";
+  src: url("./assets/fonts/HankenGrotesk-VariableFont_wght.ttf")
+    format("truetype");
+}
+
+body {
+  margin: 0;
+}
+
+p {
+  font-family: "HankenGrotesk";
+  text-align: center;
+}
+
+h3 {
+  font-family: "HankenGrotesk";
+  src: url("./assets/fonts/HankenGrotesk-VariableFont_wght.ttf")
+    format("truetype");
+}
+
+.upperPart {
+  background: linear-gradient(0deg, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  color: white;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.score {
+    background: linear-gradient(180deg, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    border-radius: 5em;
+    width: 100px;
+    height: 100px;
+    margin-left: 36.74vw;
+}
+
+#yourResult {
+  margin-top: 0;
+  padding-top: 29px;
+  font-weight: 500;
+}
+
+#scoreReveal {
+  padding-bottom: 40px;
+  font-size: 10px;
+}
+
+#seventySix {
+  font-weight: 800;
+  font-size: 55px;
+  margin-bottom: 0;
+  margin-top: 30px;
+}
+
+#of100 {
+  margin-top: 0px;
+  font-size: 12px;
+}
+
+#Observation {
+  font-weight: 700;
+  font-size: 24px;
 }
