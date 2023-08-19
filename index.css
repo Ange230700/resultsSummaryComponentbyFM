@@ -4,60 +4,87 @@
     format("truetype");
 }
 
-body {
+:root {
+  /* === PRIMARY COLORS === */
+  --light-red: hsl(0, 100%, 67%);
+  --orangey-yellow: hsl(39, 100%, 56%);
+  --green-teal: hsl(166, 100%, 37%);
+  --cobalt-blue: hsl(234, 85%, 45%);
+
+  /* === GRADIENTS COLORS === */
+  --gradient1: linear-gradient(0deg, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  --gradient2: linear-gradient(
+    180deg,
+    hsla(256, 72%, 46%, 1),
+    hsla(241, 72%, 46%, 0)
+  );
+
+  /* === NEUTRAL COLORS === */
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 89%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+
+  /* === TYPOGRAPHY === */
+  --font-size: 1.125rem;
+}
+
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-p {
-  font-family: "HankenGrotesk";
-  text-align: center;
+html,
+body {
+  height: 100vh;
+  width: 100vw;
 }
 
-h3 {
+body{
+  font-size: var(--font-size);
+  display: flex;
+  flex-direction: column;
+  row-gap: 3.5vh;
+}
+
+p, h3 {
   font-family: "HankenGrotesk";
-  src: url("./assets/fonts/HankenGrotesk-VariableFont_wght.ttf")
-    format("truetype");
 }
 
 .upperPart {
-  background: linear-gradient(0deg, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
-  color: white;
-  border-bottom-right-radius: 30px;
-  border-bottom-left-radius: 30px;
+  background: var(--gradient1);
+  color: var(--white);
+  flex-grow: 4;
 }
 
+.lowerPart {
+  flex-grow: 6;
+}
+
+
 .score {
-    background: linear-gradient(180deg, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
-    border-radius: 5em;
-    width: 100px;
-    height: 100px;
-    margin-left: 36.74vw;
+  background: var(--gradient2);
 }
 
 #yourResult {
-  margin-top: 0;
-  padding-top: 29px;
   font-weight: 500;
 }
 
 #scoreReveal {
-  padding-bottom: 40px;
-  font-size: 10px;
+  font-size: calc(var(--font-size) * .75);
 }
 
 #seventySix {
   font-weight: 800;
-  font-size: 55px;
-  margin-bottom: 0;
-  margin-top: 30px;
+  font-size: calc(var(--font-size) * 2.5);
 }
 
 #of100 {
-  margin-top: 0px;
-  font-size: 12px;
+  font-size: calc(var(--font-size) * .67);
 }
 
 #Observation {
   font-weight: 700;
-  font-size: 24px;
+  font-size: calc(var(--font-size) * 1.67);
 }
