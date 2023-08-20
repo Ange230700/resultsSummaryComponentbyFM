@@ -52,10 +52,21 @@ body {
 }
 
 body {
+  /* === MOBILE DESIGN === */
   font-size: var(--font-size);
   display: flex;
   flex-direction: column;
   row-gap: 3.5vh;
+}
+
+@media screen and (min-width: 650px) {
+  body {
+    /* === DESKTOP DESIGN === */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+  }
 }
 
 p,
@@ -64,6 +75,7 @@ h3 {
 }
 
 .upperPart {
+  /* === MOBILE DESIGN === */
   background: var(--gradient1);
   color: var(--white);
   display: flex;
@@ -75,13 +87,25 @@ h3 {
   border-bottom-right-radius: 2rem;
 }
 
+@media screen and (min-width: 650px) {
+  /* === DESKTOP DESIGN === */
+  .upperPart {
+    width: 25%;
+    height: 100%;
+    border-radius: 2rem;
+    row-gap: 1.6rem;
+  }
+}
+
 #yourResult {
+  /* === MOBILE DESIGN === */
   font-size: calc(var(--font-size) * 0.8);
   font-weight: var(--normalFontWeight);
   margin-top: 1.3rem;
 }
 
 .score {
+  /* === MOBILE DESIGN === */
   background: var(--gradient2);
   display: flex;
   flex-direction: column;
@@ -92,41 +116,77 @@ h3 {
 }
 
 #seventySix {
+  /* === MOBILE DESIGN === */
   font-weight: var(--extraBoldFontWeight);
   font-size: calc(var(--font-size) * 2.5);
   margin-top: 0.8rem;
 }
 
 #of100 {
+  /* === MOBILE DESIGN === */
   font-size: calc(var(--font-size) * 0.67);
   opacity: 0.6;
 }
 
 #Observation {
+  /* === MOBILE DESIGN === */
   font-weight: var(--normalFontWeight);
   font-size: calc(var(--font-size) * 1.0625);
 }
 
 #scoreReveal {
+  /* === MOBILE DESIGN === */
   font-size: calc(var(--font-size) * 0.75);
   margin-inline: 4.4rem;
   text-align: center;
 }
 
+@media screen and (min-width: 650px) {
+  /* === DESKTOP DESIGN === */
+  #scoreReveal {
+    font-size: calc(var(--font-size) * 0.7);
+    margin-inline: 1.9rem;
+  }
+}
+
 .lowerPart {
+  /* === MOBILE DESIGN === */
   height: auto;
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
 }
 
+@media screen and (min-width: 650px) {
+  /* === DESKTOP DESIGN === */
+  .lowerPart {
+    width: 25%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+  }
+}
+
 .lowerPart h3 {
+  /* === MOBILE DESIGN === */
   margin: 0 10vw;
   font-size: calc(var(--font-size) * 1.0625);
   color: var(--dark-gray-blue);
 }
 
+@media screen and (min-width: 650px) {
+  /* === DESKTOP DESIGN === */
+  .lowerPart h3 {
+    align-self: flex-start;
+    margin: 0 0 0 10%;
+    font-size: calc(var(--font-size) * 1);
+  }
+}
+
 .lowerPart > div {
+  /* === MOBILE DESIGN === */
   display: flex;
   column-gap: 0.7rem;
   align-items: center;
@@ -135,62 +195,82 @@ h3 {
   padding: 0 1rem;
 }
 
+@media screen and (min-width: 650px) {
+  /* === DESKTOP DESIGN === */
+  .lowerPart > div {
+    width: 90%;
+    font-size: calc(var(--font-size) * 0.8);
+  }
+}
+
 .lowerPart > #reactionSection {
+  /* === MOBILE DESIGN === */
   background-color: var(--background-color-of-the-reaction-section);
   border-radius: 0.5rem;
 }
 
 .lowerPart > #memorySection {
+  /* === MOBILE DESIGN === */
   background-color: var(--background-color-of-the-memory-section);
   border-radius: 0.5rem;
 }
 
 .lowerPart > #verbalSection {
+  /* === MOBILE DESIGN === */
   background-color: var(--background-color-of-the-verbal-section);
   border-radius: 0.5rem;
 }
 
 .lowerPart > #visualSection {
+  /* === MOBILE DESIGN === */
   background-color: var(--background-color-of-the-visual-section);
   border-radius: 0.5rem;
 }
 
 .lowerPart > div > p {
+  /* === MOBILE DESIGN === */
   flex-grow: 1;
   display: flex;
   justify-content: space-between;
 }
 
 .lowerPart > div > p > #reaction {
+  /* === MOBILE DESIGN === */
   color: var(--light-red);
   font-weight: var(--boldFontWeight);
 }
 
 .lowerPart > div > p > #memory {
+  /* === MOBILE DESIGN === */
   color: var(--orangey-yellow);
   font-weight: var(--boldFontWeight);
 }
 
 .lowerPart > div > p > #verbal {
+  /* === MOBILE DESIGN === */
   color: var(--green-teal);
   font-weight: var(--boldFontWeight);
 }
 
 .lowerPart > div > p > #visual {
+  /* === MOBILE DESIGN === */
   color: var(--cobalt-blue);
   font-weight: var(--boldFontWeight);
 }
 
 .lowerPart > div > p > .mark {
+  /* === MOBILE DESIGN === */
   font-weight: var(--boldFontWeight);
   color: var(--dark-gray-blue);
 }
 
 .lowerPart > div > p > .mark > .secondPartOfTheMark {
+  /* === MOBILE DESIGN === */
   color: var(--color-of-the-second-part-of-the-mark);
 }
 
 button {
+  /* === MOBILE DESIGN === */
   border: none;
   border-radius: 3rem;
   padding: 1rem;
@@ -199,4 +279,13 @@ button {
   background-color: var(--dark-gray-blue);
   font-family: "HankenGrotesk";
   font-weight: var(--boldFontWeight);
+}
+
+@media screen and (min-width: 650px) {
+  /* === DESKTOP DESIGN === */
+  button {
+    width: 90%;
+    margin: 0;
+    padding: 0.5rem 1rem;
+  }
 }
