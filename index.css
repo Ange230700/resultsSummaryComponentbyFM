@@ -25,6 +25,13 @@
   --light-lavender: hsl(241, 100%, 89%);
   --dark-gray-blue: hsl(224, 30%, 27%);
 
+  /* === OTHER COLOR SETTINGS === */
+  --color-of-the-second-part-of-the-mark: hsla(224, 30%, 27%, 0.6);
+  --background-color-of-the-reaction-section: hsla(0, 100%, 67%, 0.2);
+  --background-color-of-the-memory-section: hsla(39, 100%, 56%, 0.2);
+  --background-color-of-the-verbal-section: hsla(166, 100%, 37%, 0.2);
+  --background-color-of-the-visual-section: hsla(234, 85%, 45%, 0.2);
+
   /* === TYPOGRAPHY === */
   --font-size: 1.125rem;
   --normalFontWeight: 500;
@@ -113,9 +120,10 @@ h3 {
   row-gap: 1rem;
 }
 
-.lowerPart h3{
+.lowerPart h3 {
   margin: 0 10vw;
   font-size: calc(var(--font-size) * 1.0625);
+  color: var(--dark-gray-blue);
 }
 
 .lowerPart > div {
@@ -127,10 +135,44 @@ h3 {
   padding: 0 1rem;
 }
 
+.lowerPart > .reactionSection {
+  background-color: var(--background-color-of-the-reaction-section);
+  border-radius: 0.5rem;
+}
+
 .lowerPart > div > p {
   flex-grow: 1;
   display: flex;
   justify-content: space-between;
+}
+
+.lowerPart > div > p > #reaction {
+  color: var(--light-red);
+  font-weight: var(--boldFontWeight);
+}
+
+.lowerPart > div > p > #memory {
+  color: var(--orangey-yellow);
+  font-weight: var(--boldFontWeight);
+}
+
+.lowerPart > div > p > #verbal {
+  color: var(--green-teal);
+  font-weight: var(--boldFontWeight);
+}
+
+.lowerPart > div > p > #visual {
+  color: var(--cobalt-blue);
+  font-weight: var(--boldFontWeight);
+}
+
+.lowerPart > div > p > .mark {
+  font-weight: var(--boldFontWeight);
+  color: var(--dark-gray-blue);
+}
+
+.lowerPart > div > p > .mark > .secondPartOfTheMark {
+  color: var(--color-of-the-second-part-of-the-mark);
 }
 
 button {
