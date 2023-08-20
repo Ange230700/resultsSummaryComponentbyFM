@@ -27,10 +27,10 @@
 
   /* === OTHER COLOR SETTINGS === */
   --color-of-the-second-part-of-the-mark: hsla(224, 30%, 27%, 0.6);
-  --background-color-of-the-reaction-section: hsla(0, 100%, 67%, 0.2);
-  --background-color-of-the-memory-section: hsla(39, 100%, 56%, 0.2);
-  --background-color-of-the-verbal-section: hsla(166, 100%, 37%, 0.2);
-  --background-color-of-the-visual-section: hsla(234, 85%, 45%, 0.2);
+  --background-color-of-the-reaction-section: hsla(0, 100%, 67%, 0.1);
+  --background-color-of-the-memory-section: hsla(39, 100%, 56%, 0.1);
+  --background-color-of-the-verbal-section: hsla(166, 100%, 37%, 0.1);
+  --background-color-of-the-visual-section: hsla(234, 85%, 45%, 0.1);
 
   /* === TYPOGRAPHY === */
   --font-size: 1.125rem;
@@ -135,8 +135,23 @@ h3 {
   padding: 0 1rem;
 }
 
-.lowerPart > .reactionSection {
+.lowerPart > #reactionSection {
   background-color: var(--background-color-of-the-reaction-section);
+  border-radius: 0.5rem;
+}
+
+.lowerPart > #memorySection {
+  background-color: var(--background-color-of-the-memory-section);
+  border-radius: 0.5rem;
+}
+
+.lowerPart > #verbalSection {
+  background-color: var(--background-color-of-the-verbal-section);
+  border-radius: 0.5rem;
+}
+
+.lowerPart > #visualSection {
+  background-color: var(--background-color-of-the-visual-section);
   border-radius: 0.5rem;
 }
 
