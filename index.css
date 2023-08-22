@@ -66,6 +66,8 @@ body {
     justify-content: center;
     align-items: center;
     padding: 10%;
+    width: 55%;
+    margin-inline: auto;
   }
 }
 
@@ -82,7 +84,7 @@ h3 {
   flex-direction: column;
   align-items: center;
   row-gap: 0.65rem;
-  height: 41vh;
+  height: 45vh;
   border-bottom-left-radius: 2rem;
   border-bottom-right-radius: 2rem;
 }
@@ -93,7 +95,8 @@ h3 {
     width: 25%;
     height: 100%;
     border-radius: 2rem;
-    row-gap: 1.6rem;
+    row-gap: 2.1rem;
+    flex-grow: 1;
   }
 }
 
@@ -102,6 +105,13 @@ h3 {
   font-size: calc(var(--font-size) * 0.8);
   font-weight: var(--normalFontWeight);
   margin-top: 1.3rem;
+}
+
+@media screen and (min-width: 650px) {
+  /* === DESKTOP DESIGN === */
+  #yourResult {
+    margin-top: 0.65rem;
+  }
 }
 
 .score {
@@ -146,6 +156,8 @@ h3 {
   #scoreReveal {
     font-size: calc(var(--font-size) * 0.7);
     margin-inline: 1.9rem;
+    flex-grow: 1;
+    margin-bottom: 0.65rem;
   }
 }
 
@@ -166,6 +178,7 @@ h3 {
     align-items: center;
     border-top-right-radius: 2rem;
     border-bottom-right-radius: 2rem;
+    flex-grow: 1;
   }
 }
 
@@ -180,8 +193,8 @@ h3 {
   /* === DESKTOP DESIGN === */
   .lowerPart h3 {
     align-self: flex-start;
-    margin: 0 0 0 10%;
-    font-size: calc(var(--font-size) * 1);
+    margin: 0.5rem 0 0 10%;
+    font-size: calc(var(--font-size) * 0.85);
   }
 }
 
@@ -201,6 +214,18 @@ h3 {
     width: 90%;
     font-size: calc(var(--font-size) * 0.8);
   }
+
+  .lowerPart .sections{
+    flex-shrink: 1;
+  }
+
+  .sections > * {
+    flex-shrink: 1;
+  }
+
+  .sections > * > p {
+    flex-shrink: 1;
+  } 
 }
 
 .lowerPart > #reactionSection {
@@ -287,7 +312,26 @@ button {
     width: 90%;
     margin: 0;
     padding: 0.5rem 1rem;
+    margin-bottom: .5rem;
   }
 }
 
-/* TODO: Add the box-shadow(I think) to finish the design */
+.wrapper {
+  /* === MOBILE DESIGN === */
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.3rem;
+}
+
+@media screen and (min-width: 650px) {
+  /* === DESKTOP DESIGN === */
+  .wrapper {
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 50%;
+    flex-grow: 1;
+    box-shadow: 1rem 1.5rem 3rem 1rem rgba(0, 0, 0, 0.1);
+  }
+}
